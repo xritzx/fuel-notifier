@@ -20,8 +20,8 @@ void handleADC(){
 
 void setup(){
     Serial.begin(115200);
-    wifiMulti.addAP("meth", "12346789");
-    wifiMulti.addAP("Redmi5", "12345asdf");
+    wifiMulti.addAP("Your_SSID1", "YOUR_PASSWORD");
+    wifiMulti.addAP("Your_SSID2", "YOUR_PASSWORD");
     WiFi.mode(WIFI_STA);
     Serial.println("");
     while(wifiMulti.run() != WL_CONNECTED){
