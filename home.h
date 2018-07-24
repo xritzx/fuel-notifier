@@ -1,13 +1,13 @@
 const char homepage[] PROGMEM = R"=====(
 <!DOCTYPE html>
 <html>
-<body style="background:rgb(33, 33, 33)">
+<body style="background:rgb(0,0,0)">
  
 <div id="Fuel Tank" style="text-align:center;">
-<h1 style=" color:White;background:#3E2723; padding:5%">Fuel Notifier</h1>
+<h1 style=" color:White;background:Black; padding:5%">Fuel Notifier</h1>
     <img src="https://images.hertz.com/icons/GasIcon.png" alt="" width="40%" style="margin:auto">
 </div>
-<a href="https://www.google.com/maps/search/?api=1&query=petrol+pump" style="text-decoration:none">
+<a href="https://www.google.com/maps/search/?api=1&query=petrol+pump+gas+station" style="text-decoration:none">
 <div style="margin:auto; width:10%; border-radius:50%; padding:20%;text-align:center; color:beige; font-size:20px; text-decoration:none" id="tank">
     <h2><span id="fuel_div">0</span>%<br></h2><br>
     <small>Click to find Gas Stations near you</small>
@@ -26,7 +26,7 @@ setInterval(function() {
 setInterval(pushNot, 1000);
 
 function mapRange( value, r1, r2 ) { 
-    return ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ];
+    return parseInt( ( value - r1[ 0 ] ) * ( r2[ 1 ] - r2[ 0 ] ) / ( r1[ 1 ] - r1[ 0 ] ) + r2[ 0 ] );
 }
 function getData() {
   var xhttp = new XMLHttpRequest();
@@ -56,7 +56,7 @@ function pushNot(){
         icon:"https://images.hertz.com/icons/GasIcon.png"
     });
     pushNoti.onclick = function(){
-        location.href = "https://www.google.com/maps/search/?api=1&query=petrol+pump";
+        location.href = "https://www.google.com/maps/search/?api=1&query=petrol+pump+gas+station";
     }}
 }
 
